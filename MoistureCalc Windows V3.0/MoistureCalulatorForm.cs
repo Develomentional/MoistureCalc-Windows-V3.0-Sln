@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace MoistureCalc_Windows_V3._0
 {
-    public partial class ResultsForm : Form
+    public partial class MoistureCalulatorForm : Form
     {
-        public ResultsForm()
+        public MoistureCalulatorForm()
         {
             InitializeComponent();
-        }
-              
-        private void DoneClicked(object sender, EventArgs e)
-        {
-
         }
     }
 }

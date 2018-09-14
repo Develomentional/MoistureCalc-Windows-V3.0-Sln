@@ -1,7 +1,15 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
-  <Profiles>
-    <Profile Name="(Default)" />
-  </Profiles>
-  <Settings />
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MoistureCalc_Windows_V3._0.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Location" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">52, 83</Value>
+    </Setting>
+    <Setting Name="appText" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Results</Value>
+    </Setting>
+    <Setting Name="DoneText" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Done</Value>
+    </Setting>
+  </Settings>
 </SettingsFile>

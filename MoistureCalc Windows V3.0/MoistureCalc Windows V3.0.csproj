@@ -31,9 +31,45 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>develomentioal loigo_win7.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Fickle, Version=151.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Fickle.0.1.0.151\lib\net45\Fickle.dll</HintPath>
+    </Reference>
+    <Reference Include="Hprose, Version=4.0.30319.34209, Culture=neutral, PublicKeyToken=eb8819713de2ccff, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hprose.1.5.7\lib\net461\Hprose.dll</HintPath>
+    </Reference>
+    <Reference Include="Hprose.Client, Version=4.0.30319.34209, Culture=neutral, PublicKeyToken=eb8819713de2ccff, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hprose.Client.1.5.7\lib\net461\Hprose.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="NotificationCenter, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NotificationCenter.1.0.2\lib\portable45-net45+win8\NotificationCenter.dll</HintPath>
+    </Reference>
+    <Reference Include="ObjectiveC, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CocoaSharp.ObjectiveC.1.0.0\lib\ObjectiveC.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform, Version=1.1.0.189, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Platform.NET.1.1.0.189\lib\net40\Platform.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.VirtualFileSystem, Version=1.1.0.102, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Platform.VirtualFileSystem.1.1.0.102\lib\net40\Platform.VirtualFileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Platform.Xml.Serialization, Version=1.1.0.189, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Platform.Xml.Serialization.1.1.0.189\lib\net40\Platform.Xml.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpSwift.Attributes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpSwift.Attributes.1.1.0\lib\SharpSwift.Attributes.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -45,14 +81,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlertClass.cs" />
+    <Compile Include="AppBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AppBaseForm.Designer.cs">
+      <DependentUpon>AppBaseForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="MoistureCalcResultModel.cs" />
+    <Compile Include="MoistureCalulatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoistureCalulatorForm.Designer.cs">
+      <DependentUpon>MoistureCalulatorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AppBaseForm.resx">
+      <DependentUpon>AppBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoistureCalulatorForm.resx">
+      <DependentUpon>MoistureCalulatorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -61,7 +120,9 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -74,6 +135,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20180129_032021.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.scale-240.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="develomentioal loigo_win7.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
